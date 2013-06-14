@@ -1,22 +1,3 @@
-<?php
-/**
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +7,7 @@
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-
-		echo $this->Html->css('/bootstrap/css/bootstrap.min');
+		echo $this->Html->css('http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css');
 		echo $this->Html->css('styles');
 
 		echo $this->fetch('meta');
@@ -66,8 +46,8 @@
 		</div>
 	</div><!-- .container-narrow -->
 	<?php 
-	echo $this->Html->script('jquery-1.9.1.min');
-	echo $this->Html->script('/bootstrap/js/bootstrap.min.js'); 
+	echo $this->Html->script('http://code.jquery.com/jquery-1.10.1.min.js');
+	echo $this->Html->script('http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js'); 
 	?>
 </body>
 </html>

@@ -1,4 +1,6 @@
 tmp/*
+app/webroot/img/project/*
+app/webroot/img/thumbnails/*
 [Cc]onfig/core.php
 [Cc]onfig/database.php
 app/tmp/*

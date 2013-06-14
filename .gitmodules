@@ -7,3 +7,6 @@
 [submodule "externals/markdown"]
 	path = externals/markdown
 	url = https://github.com/Hyra/markdown.git
+[submodule "externals/tags"]
+	path = externals/tags
+	url = https://github.com/CakeDC/tags.git
