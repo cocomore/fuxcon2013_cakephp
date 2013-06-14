@@ -1,0 +1,1 @@
+../../externals/cakephp/app/webroot/index.php

@@ -1,3 +1,9 @@
 [submodule "externals/cakephp"]
 	path = externals/cakephp
 	url = https://github.com/cakephp/cakephp.git
+[submodule "externals/debug_kit"]
+	path = externals/debug_kit
+	url = https://github.com/cakephp/debug_kit.git
+[submodule "externals/markdown"]
+	path = externals/markdown
+	url = https://github.com/Hyra/markdown.git
