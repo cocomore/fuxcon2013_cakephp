@@ -28,7 +28,7 @@ git submodule update --init --recursive
 echo "Loading database ..."
 mysql -ufuxcon -pfuxcon fuxcon2013_cakephp < fuxcon2013_cakephp.sql
 
-echo "Setting permissions ..."
+echo "Setting permissions (requires root access) ..."
 sys=`uname -s`
 if [ $sys = Darvin ]
 then
@@ -36,9 +36,14 @@ then
     "www-data allow delete,write,append,add_file,delete,add_subdirectory,file_inherit,directory_inherit"  \
     app/tmp \
     app/webroot/img/thumbnails \
-    app/webroot/img/project \
+    app/webroot/img/project
 else
-
+    for d in app/tmp app/webroot/img/thumbnails app/webroot/img/project
+    do
+      find $d -type d -print | sudo xargs chgrp www-data
+      find $d -type d -print | sudo xargs chmod g+rwxs
+    done
 fi
 
 echo "Done."
+
