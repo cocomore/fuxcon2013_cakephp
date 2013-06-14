@@ -26,10 +26,16 @@ echo "Loading database ..."
 mysql -ufuxcon -pfuxcon fuxcon2013_cakephp < fuxcon2013_cakephp.sql
 
 echo "Setting permissions ..."
-sudo chmod -R +a \
-  "www-data allow delete,write,append,add_file,delete,add_subdirectory,file_inherit,directory_inherit"  \
-  app/tmp \
-  app/webroot/img/thumbnails \
-  app/webroot/img/project \
+sys=`uname -s`
+if [ $sys = Darvin ]
+then
+  sudo chmod -R +a \
+    "www-data allow delete,write,append,add_file,delete,add_subdirectory,file_inherit,directory_inherit"  \
+    app/tmp \
+    app/webroot/img/thumbnails \
+    app/webroot/img/project \
+else
+
+fi
 
 echo "Done."
