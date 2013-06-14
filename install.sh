@@ -22,6 +22,9 @@ then
   exit
 fi
 
+echo "Loading external modules ..."
+git submodule update --init --recursive
+
 echo "Loading database ..."
 mysql -ufuxcon -pfuxcon fuxcon2013_cakephp < fuxcon2013_cakephp.sql
 
