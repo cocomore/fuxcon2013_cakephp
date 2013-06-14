@@ -18,10 +18,18 @@ EOS
 read -p "Ready to proceed? [y]/n " reply
 if [ "x$reply" != "x" -a "x$reply" != "xy" ]
 then
-  echo "Please type \"y\" or simply press ENTER to proceed the installation"
+  echo "Please type \"y\" or simply press ENTER to proceed with the installation"
   exit
 fi
 
-echo "Proceeding ..."
+echo "Loading database ..."
+mysql -ufuxcon -pfuxcon fuxcon2013_cakephp < fuxcon2013_cakephp.sql
 
-  
+echo "Setting permissions ..."
+sudo chmod -R +a \
+  "www-data allow delete,write,append,add_file,delete,add_subdirectory,file_inherit,directory_inherit"  \
+  app/tmp \
+  app/webroot/img/thumbnails \
+  app/webroot/img/project \
+
+echo "Done."
