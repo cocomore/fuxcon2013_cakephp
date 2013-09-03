@@ -1,4 +1,4 @@
-<pre><?php
+<?php
 unset($dataForView);
 unset($viewFile);
 unset($debugToolbarPanels);
