@@ -10,7 +10,7 @@ App::uses('AppController', 'Controller');
 class ProjectsController extends AppController {
 
   const NO_COL = 3;
-  const PAGE_SIZE = 5;
+  const PAGE_SIZE = 6;
 
   public $paginate = array(
     'Project' => array(
